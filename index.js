@@ -77,6 +77,7 @@ async function run() {
                 },
             }
 
+            // Update the first document that matches the filter
             const result = await craftsCollection.updateOne(filter, craft, options);
             res.send(result);
         })
@@ -86,7 +87,7 @@ async function run() {
             const newCrafts = req.body;
             console.log(newCrafts);
             const result = await craftsCollection.insertOne(newCrafts);
-            res.send(result);   // result send to Database
+            res.send(result);               // result send to Database
         })
 
         // Delete Craft from database
@@ -99,6 +100,7 @@ async function run() {
             res.send(result);
         })
 
+        // Send a ping to confirm a successful connection
         // await client.db("admin").command({ ping: 1 });
         console.log("Pinged your deployment. You successfully connected to MongoDB!");
     } finally {
