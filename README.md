@@ -1,5 +1,5 @@
-Sever Site of Art $ Craft Store
-  Painting and Drawing
+Sever Site of Art & Craft Store
+ *  Painting and Drawing
 
 <!-- ## Overview
 ArtistryHub is an Art & Craft Store website specializing in the Painting and Drawing category. Explore a diverse selection of artwork and unleash your creativity!
