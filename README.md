@@ -1,6 +1,6 @@
-# ArtistryHub -  Painting and Drawing
+  Painting and Drawing
 
-## Overview
+<!-- ## Overview
 ArtistryHub is an Art & Craft Store website specializing in the Painting and Drawing category. Explore a diverse selection of artwork and unleash your creativity!
 
 ## Live Site
@@ -28,4 +28,4 @@ To run this project locally, follow these steps:
 1. **Clone the Repository**:
 2. **Install NPM Package**
 3. **Create a .env file your root directory**
-4. **Run: npm start**:
+4. **Run: npm start**: -->
