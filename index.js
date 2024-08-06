@@ -56,10 +56,12 @@ async function run() {
             res.send(result);
         })
 
+
+        
         // Update Data
         app.put('/addcrafts/:id', async (req, res) => {
             const id = req.params.id;
-           
+            // Create a filter for update craft
             const filter = { _id: new ObjectId(id) };
             const options = { upsert: true };
             const updatedCraft = req.body;
@@ -104,7 +106,8 @@ async function run() {
         // await client.db("admin").command({ ping: 1 });
         console.log("Pinged your deployment. You successfully connected to MongoDB!");
     } finally {
-      
+        // Ensures that the client will close when you finish/error
+        // await client.close();
     }
 }
 run().catch(console.dir);
