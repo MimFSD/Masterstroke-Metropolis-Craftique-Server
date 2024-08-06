@@ -59,7 +59,7 @@ async function run() {
         // Update Data
         app.put('/addcrafts/:id', async (req, res) => {
             const id = req.params.id;
-                        // Create a filter for update craft
+            // Create a filter for update craft
             const filter = { _id: new ObjectId(id) };
             const options = { upsert: true };
             const updatedCraft = req.body;
@@ -77,12 +77,11 @@ async function run() {
                 },
             }
 
-            // Update the first document that matches the filter
             const result = await craftsCollection.updateOne(filter, craft, options);
             res.send(result);
         })
 
-                    
+        // Received data from client side and send to database
         app.post('/addcrafts', async (req, res) => {
             const newCrafts = req.body;
             console.log(newCrafts);
@@ -100,7 +99,6 @@ async function run() {
             res.send(result);
         })
 
-        // Send a ping to confirm a successful connection
         // await client.db("admin").command({ ping: 1 });
         console.log("Pinged your deployment. You successfully connected to MongoDB!");
     } finally {
