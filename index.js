@@ -42,7 +42,7 @@ async function run() {
             res.send(result);
         })
 
-        // for id fetching
+                     // for id fetching
         app.get('/addcrafts/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) };
@@ -56,12 +56,10 @@ async function run() {
             res.send(result);
         })
 
-
-
         // Update Data
         app.put('/addcrafts/:id', async (req, res) => {
             const id = req.params.id;
-        
+            // Create a filter for update craft
             const filter = { _id: new ObjectId(id) };
             const options = { upsert: true };
             const updatedCraft = req.body;
