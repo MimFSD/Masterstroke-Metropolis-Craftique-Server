@@ -27,8 +27,8 @@ const client = new MongoClient(uri, {
 //https://i.ibb.co/bm32RsT/img20240427-12245804.png
 async function run() {
     try {
-        // Connect the client to the server	(optional starting in v4.7)
-        // await client.connect();
+                // Connect the client to the server	(optional starting in v4.7)
+             // await client.connect();
 
         // Create database and collection
         const craftsCollection = client.db("craftsDB").collection("crafts");
