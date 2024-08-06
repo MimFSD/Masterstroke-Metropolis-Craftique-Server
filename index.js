@@ -27,9 +27,7 @@ const client = new MongoClient(uri, {
 //https://i.ibb.co/bm32RsT/img20240427-12245804.png
 async function run() {
     try {
-                // Connect the client to the server	(optional starting in v4.7)
-             // await client.connect();
-
+                
         // Create database and collection
         const craftsCollection = client.db("craftsDB").collection("crafts");
         const categoriesCollection = client.db("categoriesDB").collection("categories")
@@ -42,7 +40,6 @@ async function run() {
             res.send(result);
         })
 
-        // for id fetching
         app.get('/addcrafts/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) };
@@ -87,7 +84,7 @@ async function run() {
             const newCrafts = req.body;
             console.log(newCrafts);
             const result = await craftsCollection.insertOne(newCrafts);
-            res.send(result);   // result send to Database
+            res.send(result);   
         })
 
         // Delete Craft from database
