@@ -42,7 +42,7 @@ async function run() {
             res.send(result);
         })
 
-                     // for id fetching
+        // for id fetching
         app.get('/addcrafts/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) };
@@ -59,7 +59,7 @@ async function run() {
         // Update Data
         app.put('/addcrafts/:id', async (req, res) => {
             const id = req.params.id;
-            // Create a filter for update craft
+                        // Create a filter for update craft
             const filter = { _id: new ObjectId(id) };
             const options = { upsert: true };
             const updatedCraft = req.body;
@@ -82,7 +82,7 @@ async function run() {
             res.send(result);
         })
 
-        // Received data from client side and send to database
+                    
         app.post('/addcrafts', async (req, res) => {
             const newCrafts = req.body;
             console.log(newCrafts);
